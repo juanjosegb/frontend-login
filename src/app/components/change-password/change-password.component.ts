@@ -5,7 +5,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 @Component({
   selector: "app-home",
   templateUrl: "./change-password.component.html",
-  styleUrls: ["./change-password.component.css"]
+  styleUrls: ["./change-password.component.scss"]
 })
 export class ChangePasswordComponent {
   password: string;

@@ -5,7 +5,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 @Component({
   selector: "check-token",
   templateUrl: "./check-token.component.html",
-  styleUrls: ["./check-token.component.css"]
+  styleUrls: ["./check-token.component.scss"]
 })
 export class CheckTokenComponent {
   email: string;

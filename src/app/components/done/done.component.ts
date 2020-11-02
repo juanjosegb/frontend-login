@@ -5,7 +5,7 @@ import {Router} from "@angular/router";
 @Component({
   selector: "app-register",
   templateUrl: "./done.component.html",
-  styleUrls: ["./done.component.css"]
+  styleUrls: ["./done.component.scss"]
 })
 export class DoneComponent {
   constructor(public userService: UsersService, public router: Router) {}

@@ -124,5 +124,10 @@
   "defaultProject": "frontend-login",
   "cli": {
     "analytics": false
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
   }
 }
