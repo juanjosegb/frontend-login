@@ -8,13 +8,15 @@ import { RegisterComponent } from "./components/register/register.component";
 import { HttpClientModule } from "@angular/common/http";
 import { CookieService } from "ngx-cookie-service";
 import { HomeComponent } from "./components/home/home.component";
+import {DoneComponent} from "./components/done/done.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    DoneComponent
   ],
   imports: [BrowserModule, routing, FormsModule, HttpClientModule],
   providers: [CookieService],

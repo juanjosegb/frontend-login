@@ -1,5 +1,5 @@
 import {Injectable} from "@angular/core";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpParams} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {CookieService} from "ngx-cookie-service";
 
@@ -11,11 +11,18 @@ export class UsersService {
   }
 
   login(user: any): Observable<any> {
-    return this.http.post("https://localhost:8000/login", user);
+    let body = new HttpParams();
+    body = body.set('email', user.email);
+    body = body.set('password', user.password);
+    return this.http.post("http://127.0.0.1:8000/login", body);
   }
 
   register(user: any): Observable<any> {
-    return this.http.post("https://localhost:8000/register", user);
+    let body = new HttpParams();
+    body = body.set('email', user.email);
+    body = body.set('password', user.password);
+    body = body.set('confirmPassword', user.confirmPassword);
+    return this.http.post("http://127.0.0.1:8000/register", body);
   }
 
   setToken(token: string) {
