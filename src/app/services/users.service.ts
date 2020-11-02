@@ -25,6 +25,10 @@ export class UsersService {
     return this.http.post("http://127.0.0.1:8000/register", body);
   }
 
+  checkToken(user: any): Observable<any> {
+    return this.http.get("http://127.0.0.1:8000/reset-password/reset/" + user.token);
+  }
+
   setToken(token: string) {
     this.cookies.set("token", token);
   }

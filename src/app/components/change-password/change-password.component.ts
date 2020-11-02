@@ -3,10 +3,10 @@ import { UsersService } from "../../services/users.service";
 
 @Component({
   selector: "app-home",
-  templateUrl: "./check-password.component.html",
-  styleUrls: ["./check-password.component.css"]
+  templateUrl: "./change-password.component.html",
+  styleUrls: ["./change-password.component.css"]
 })
-export class CheckPasswordComponent implements OnInit {
+export class ChangePasswordComponent implements OnInit {
   constructor(public userService: UsersService) {}
   ngOnInit() {
     this.getUserLogged();

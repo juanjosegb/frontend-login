@@ -10,6 +10,8 @@ import { CookieService } from "ngx-cookie-service";
 import { HomeComponent } from "./components/home/home.component";
 import {DoneComponent} from "./components/done/done.component";
 import {ProfileComponent} from "./components/profile/profile.component";
+import {CheckTokenComponent} from "./components/check-token/check-token.component";
+import {ChangePasswordComponent} from "./components/change-password/change-password.component";
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import {ProfileComponent} from "./components/profile/profile.component";
     RegisterComponent,
     HomeComponent,
     DoneComponent,
-    ProfileComponent
+    ProfileComponent,
+    CheckTokenComponent,
+    ChangePasswordComponent
   ],
   imports: [BrowserModule, routing, FormsModule, HttpClientModule],
   providers: [CookieService],
