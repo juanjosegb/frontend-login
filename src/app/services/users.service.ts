@@ -1,5 +1,5 @@
 import {Injectable} from "@angular/core";
-import {HttpClient, HttpParams} from "@angular/common/http";
+import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {CookieService} from "ngx-cookie-service";
 
@@ -29,15 +29,19 @@ export class UsersService {
     return this.http.get("http://127.0.0.1:8000/reset-password/reset/" + user.token);
   }
 
+  changePassword(user: any): Observable<any> {
+    let headers = new HttpHeaders();
+    headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+    headers = headers.set('password', user.password);
+    headers = headers.set('confirmPassword', user.confirmPassword);
+    return this.http.put("http://127.0.0.1:8000/reset-password/change-password", {}, {headers: headers});
+  }
+
   setToken(token: string) {
     this.cookies.set("token", token);
   }
 
   getToken() {
     return this.cookies.get("token");
-  }
-
-  getUser() {
-    return this.http.get("https://reqres.in/api/users/2");
   }
 }

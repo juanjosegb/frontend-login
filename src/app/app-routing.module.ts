@@ -14,6 +14,6 @@ const appRoutes = [
   { path: "register", component: RegisterComponent, pathMatch: "full" },
   { path: "done", component: DoneComponent, pathMatch: "full" },
   { path: "reset/:token", component: CheckTokenComponent, pathMatch: "full" },
-  { path: "change-password", component: ChangePasswordComponent, pathMatch: "full" },
+  { path: "change-password/:userId/:token", component: ChangePasswordComponent, pathMatch: "full" },
 ];
 export const routing = RouterModule.forRoot(appRoutes);
