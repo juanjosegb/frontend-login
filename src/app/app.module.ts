@@ -9,6 +9,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { CookieService } from "ngx-cookie-service";
 import { HomeComponent } from "./components/home/home.component";
 import {DoneComponent} from "./components/done/done.component";
+import {ProfileComponent} from "./components/profile/profile.component";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {DoneComponent} from "./components/done/done.component";
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    DoneComponent
+    DoneComponent,
+    ProfileComponent
   ],
   imports: [BrowserModule, routing, FormsModule, HttpClientModule],
   providers: [CookieService],

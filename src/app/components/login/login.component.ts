@@ -10,6 +10,7 @@ import {Router} from "@angular/router";
 export class LoginComponent {
   email: string;
   password: string;
+  error: string
 
   constructor(public userService: UsersService, public router: Router) {}
 
@@ -17,11 +18,15 @@ export class LoginComponent {
     const user = {email: this.email, password: this.password};
     this.userService.login(user).subscribe(
       data => {
-        this.router.navigateByUrl("/");
+        this.router.navigateByUrl("/profile");
       },
       error => {
-        console.log(error);
+        this.updateErrors('You have entered an invalid username or password');
       }
     );
+  }
+
+  updateErrors(error: string) {
+    this.error = error;
   }
 }
