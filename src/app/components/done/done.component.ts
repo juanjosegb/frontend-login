@@ -1,12 +1,11 @@
-import { Component } from "@angular/core";
-import { UsersService } from "../../services/users.service";
-import {Router} from "@angular/router";
+import {Component} from "@angular/core";
 
 @Component({
-  selector: "app-register",
+  selector: "done",
   templateUrl: "./done.component.html",
   styleUrls: ["./done.component.scss"]
 })
 export class DoneComponent {
-  constructor(public userService: UsersService, public router: Router) {}
+  constructor() {
+  }
 }

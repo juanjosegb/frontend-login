@@ -40,8 +40,4 @@ export class UsersService {
   setToken(token: string) {
     this.cookies.set("token", token);
   }
-
-  getToken() {
-    return this.cookies.get("token");
-  }
 }

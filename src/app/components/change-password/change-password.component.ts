@@ -3,7 +3,7 @@ import {UsersService} from "../../services/users.service";
 import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
-  selector: "app-home",
+  selector: "change-password",
   templateUrl: "./change-password.component.html",
   styleUrls: ["./change-password.component.scss"]
 })
@@ -22,13 +22,13 @@ export class ChangePasswordComponent {
   }
 
   change() {
-    const user = {
+    const changePasswordData = {
       password: this.password,
       confirmPassword: this.confirmPassword,
       token: this.token,
       userId: this.userId
     };
-    this.userService.changePassword(user).subscribe(
+    this.userService.changePassword(changePasswordData).subscribe(
       data => {
         this.router.navigate(['/login']);
       },
