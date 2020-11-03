@@ -1,0 +1,19 @@
+<div class="card">
+  <h4 class="card-header">Recover Password</h4>
+  <div class="card-body">
+    <form method="POST">
+      <div class="form-group">
+        <input type="email" name="email" [(ngModel)]="email" required="required" class="form-control form-control-lg"
+               id="email" aria-describedby="emailHelp" placeholder="Email address">
+      </div>
+      <div class="form-group">
+        <button (click)="forgot()" class="btn-lg btn-primary col-12 mt-3">
+          Send Recover Link
+        </button>
+      </div>
+    </form>
+    <ul *ngIf="error">
+      <li>{{ error }}</li>
+    </ul>
+  </div>
+</div>

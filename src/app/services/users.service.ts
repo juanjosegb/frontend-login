@@ -25,8 +25,10 @@ export class UsersService {
     return this.http.post("http://127.0.0.1:8000/register", body);
   }
 
-  checkToken(user: any): Observable<any> {
-    return this.http.get("http://127.0.0.1:8000/reset-password/reset/" + user.token);
+  forgotPassword(user: any): Observable<any> {
+    let body = new HttpParams();
+    body = body.set('email', user.email);
+    return this.http.post("http://127.0.0.1:8000/reset-password/forgot", body);
   }
 
   changePassword(user: any): Observable<any> {
@@ -35,6 +37,12 @@ export class UsersService {
     headers = headers.set('password', user.password);
     headers = headers.set('confirmPassword', user.confirmPassword);
     return this.http.put("http://127.0.0.1:8000/reset-password/change-password", {}, {headers: headers});
+  }
+
+  checkToken(user: any): Observable<any> {
+    let headers = new HttpHeaders();
+    headers = headers.set("Content-Type", "application/json");
+    return this.http.get("http://127.0.0.1:8000/reset-password/reset/" + user.token, {headers: headers});
   }
 
   setToken(token: string) {

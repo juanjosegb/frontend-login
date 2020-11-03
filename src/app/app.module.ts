@@ -12,6 +12,7 @@ import {DoneComponent} from "./components/done/done.component";
 import {ProfileComponent} from "./components/profile/profile.component";
 import {CheckTokenComponent} from "./components/check-token/check-token.component";
 import {ChangePasswordComponent} from "./components/change-password/change-password.component";
+import {ForgotComponent} from "./components/forgot/forgot.component";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {ChangePasswordComponent} from "./components/change-password/change-passw
     DoneComponent,
     ProfileComponent,
     CheckTokenComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    ForgotComponent
   ],
   imports: [BrowserModule, routing, FormsModule, HttpClientModule],
   providers: [CookieService],

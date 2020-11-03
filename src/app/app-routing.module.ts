@@ -6,6 +6,7 @@ import {DoneComponent} from "./components/done/done.component";
 import {ProfileComponent} from "./components/profile/profile.component";
 import {CheckTokenComponent} from "./components/check-token/check-token.component";
 import {ChangePasswordComponent} from "./components/change-password/change-password.component";
+import {ForgotComponent} from "./components/forgot/forgot.component";
 
 const appRoutes = [
   { path: "", component: HomeComponent, pathMatch: "full" },
@@ -15,5 +16,6 @@ const appRoutes = [
   { path: "done", component: DoneComponent, pathMatch: "full" },
   { path: "reset/:token", component: CheckTokenComponent, pathMatch: "full" },
   { path: "change-password/:userId/:token", component: ChangePasswordComponent, pathMatch: "full" },
+  { path: "forgot", component: ForgotComponent, pathMatch: "full" },
 ];
 export const routing = RouterModule.forRoot(appRoutes);
